@@ -1,16 +1,43 @@
 # Tic Tac Toe Online
 
-Modern Tic Tac Toe web app with three play modes:
-- In Person (2 players on one device)
-- vs Computer (Easy, Medium, Hard)
-- Online Multiplayer (real-time via Socket.IO)
+<p align="center">
+  <a href="https://playttto.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live%20Demo-playttto.netlify.app-3b82f6?style=for-the-badge" alt="Live Demo" /></a>
+  <img src="https://img.shields.io/badge/React-18-149eca?style=for-the-badge&logo=react&logoColor=white" alt="React 18" />
+  <img src="https://img.shields.io/badge/Vite-5-8b5cf6?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 5" />
+  <img src="https://img.shields.io/badge/Socket.IO-Real--time-111827?style=for-the-badge&logo=socket.io&logoColor=white" alt="Socket.IO" />
+</p>
+
+Modern Tic Tac Toe experience with three game modes:
+- **In Person** (2 players on one device)
+- **vs Computer** (**Easy / Medium / Hard**)
+- **Online Multiplayer** (real-time via Socket.IO)
+
+## Play Now
+
+**Live Link:** [https://playttto.netlify.app](https://playttto.netlify.app)
+
+## Screenshots
+
+> Place your screenshot files in `docs/screenshots/` with the names below.
+
+### Home
+![Home](./docs/screenshots/home.png)
+
+### Computer Difficulty
+![Computer Difficulty](./docs/screenshots/computer-difficulty.png)
+
+### Online Lobby
+![Online Lobby](./docs/screenshots/online-lobby.png)
+
+### In-Person Game Board
+![In-Person Game](./docs/screenshots/in-person-game.png)
 
 ## Demo Highlights
 
-- Responsive UI optimized for desktop and mobile browsers
-- 3D-inspired visual design with custom favicon
+- Responsive UI optimized for **desktop + mobile browsers**
+- Clean 3D-inspired interface with custom favicon
 - Server-authoritative online gameplay
-- Private room codes and quick match queue
+- Private room codes + quick match queue
 - Reconnect grace window for online matches
 
 ## Tech Stack
@@ -29,17 +56,17 @@ Modern Tic Tac Toe web app with three play modes:
 
 ## Gameplay Modes
 
-### 1) In Person
+### 1. In Person
 - Two local players (`X` and `O`) alternate turns
 - Win and draw detection
 - Restart support
 
-### 2) Play Against Computer
+### 2. Play Against Computer
 - `Easy`: random valid moves
 - `Medium`: tactical logic (win/block/center/corners)
 - `Hard`: minimax-based optimal play
 
-### 3) Online Multiplayer (V1)
+### 3. Online Multiplayer (V1)
 - Create room + share room code
 - Join room by code
 - Quick match pairing
@@ -47,92 +74,15 @@ Modern Tic Tac Toe web app with three play modes:
 - Restart requires both players
 - 30-second reconnect grace period
 
-## Project Structure
-
-```text
-.
-|-- src/
-|   |-- App.jsx
-|   |-- App.css
-|   `-- online/
-|       `-- useOnlineGame.js
-|-- server/
-|   `-- index.js
-|-- public/
-|   `-- favicon.svg
-|-- index.html
-`-- package.json
-```
-
-## Local Development
-
-### Prerequisites
-- Node.js 18+ (recommended: latest LTS)
-- npm 9+
-
-### Install
+## Run Locally
 
 ```bash
 npm install
-```
-
-### Run client + server together
-
-```bash
 npm run dev
 ```
 
-- Client: [http://localhost:5173](http://localhost:5173)
-- Server: [http://localhost:3001](http://localhost:3001)
-
-### Run separately
-
-```bash
-npm run dev:client
-npm run dev:server
-```
-
-## Available Scripts
-
-- `npm run dev` - run frontend and backend concurrently
-- `npm run dev:client` - run Vite frontend only
-- `npm run dev:server` - run Node server with watch mode
-- `npm run build` - production build for frontend
-- `npm run preview` - preview built frontend
-- `npm run start:server` - start backend in normal mode
-
-## Online API (Socket Events)
-
-### Client -> Server
-- `online:create_room`
-- `online:join_room`
-- `online:quick_match`
-- `online:make_move`
-- `online:restart_request`
-- `online:leave_room`
-
-### Server -> Client
-- `online:session`
-- `online:room_created`
-- `online:match_ready`
-- `online:state_update`
-- `online:restart_applied`
-- `online:player_left`
-- `online:error`
-
-## Deployment Notes
-
-- Frontend can be deployed on any static host (Vercel, Netlify, GitHub Pages for UI only).
-- Backend requires a Node runtime that supports WebSockets.
-- For production, set `VITE_SOCKET_URL` in frontend environment to your backend URL.
-- Current backend storage is in-memory; rooms reset when server restarts.
-
-## Roadmap
-
-- Persistent game/session storage
-- Spectator mode
-- Authenticated user profiles
-- Match history + leaderboard
+- Client: `http://localhost:5173`
+- Server: `http://localhost:3001`
 
 ## License
 

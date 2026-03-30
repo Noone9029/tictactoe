@@ -18,7 +18,6 @@ Modern Tic Tac Toe experience with three game modes:
 
 ## Screenshots
 
-> Place your screenshot files in `docs/screenshots/` with the names below.
 
 ### Home
 ![Home](./docs/screenshots/home.png)
